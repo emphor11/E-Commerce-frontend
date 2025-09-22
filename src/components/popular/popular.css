@@ -1,0 +1,244 @@
+/* Popular Section - Clean & Classy Design */
+.popular {
+  padding: 5rem 8% 6rem;
+  background: #ffffff;
+  text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.popular h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #080a0b;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.popular hr {
+  width: 60px;
+  height: 3px;
+  background: #212529;
+  border: none;
+  margin: 0 auto 4rem;
+  border-radius: 2px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+/* Popular items grid */
+.popular-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+/* Individual item styling (assuming Item component structure) */
+.popular-item .item {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-item .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(33, 37, 41, 0.02), transparent);
+  transition: left 0.5s ease;
+}
+
+.popular-item .item:hover::before {
+  left: 100%;
+}
+
+.popular-item .item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(33, 37, 41, 0.08);
+  border-color: #e9ecef;
+}
+
+/* Item image styling */
+.popular-item .item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.popular-item .item:hover img {
+  transform: scale(1.02);
+}
+
+/* Item name styling */
+.popular-item .item h3,
+.popular-item .item .item-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #010408;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Price styling */
+.popular-item .item .item-prices,
+.popular-item .item .price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.popular-item .item .item-price-new,
+.popular-item .item .new-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.popular-item .item .item-price-old,
+.popular-item .item .old-price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+/* Add to cart button (if present) */
+.popular-item .item .add-to-cart,
+.popular-item .item button {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: #212529;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.popular-item .item .add-to-cart:hover,
+.popular-item .item button:hover {
+  background: #495057;
+  transform: translateY(-1px);
+}
+
+/* Sale badge (if needed) */
+.popular-item .item .sale-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ffc107;
+  color: #212529;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for items */
+.popular-item .item:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.8s both; }
+.popular-item .item:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.9s both; }
+.popular-item .item:nth-child(3) { animation: fadeInUp 0.8s ease-out 1s both; }
+.popular-item .item:nth-child(4) { animation: fadeInUp 0.8s ease-out 1.1s both; }
+.popular-item .item:nth-child(n+5) { animation: fadeInUp 0.8s ease-out 1.2s both; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .popular {
+    padding: 3rem 5% 4rem;
+  }
+  
+  .popular h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .popular hr {
+    margin-bottom: 3rem;
+  }
+  
+  .popular-item {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .popular-item .item {
+    padding: 1.2rem;
+  }
+  
+  .popular-item .item img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular {
+    padding: 2.5rem 5% 3rem;
+  }
+  
+  .popular h1 {
+    font-size: 1.8rem;
+  }
+  
+  .popular-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .popular-item .item {
+    padding: 1rem;
+  }
+  
+  .popular-item .item img {
+    height: 200px;
+  }
+  
+  .popular-item .item h3,
+  .popular-item .item .item-name {
+    font-size: 1rem;
+  }
+  
+  .popular-item .item .item-price-new,
+  .popular-item .item .new-price {
+    font-size: 1.1rem;
+  }
+}

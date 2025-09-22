@@ -1,0 +1,53 @@
+/* DescriptionBox.css */
+
+.DescriptionBox {
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .description-boxNavigator {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .des-box-nav-box,
+  .desc-box-nav-box-fade {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .des-box-nav-box {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .desc-box-nav-box-fade {
+    color: #aaa;
+  }
+  
+  .desc-box-nav-box-fade:hover {
+    color: #007bff;
+  }
+  
+  .desc-box-desc p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .desc-box-desc p:first-of-type {
+    font-weight: bold;
+    color: #333;
+  }
+  
