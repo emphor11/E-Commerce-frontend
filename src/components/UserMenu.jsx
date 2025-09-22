@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './UserMenu.css';
 
@@ -120,7 +120,7 @@ const UserMenu = () => {
               My Profile
             </button>
             
-            <Link 
+            {/* <Link 
               to="/orders" 
               className="user-menu-item"
               onClick={() => setIsOpen(false)}
@@ -135,9 +135,9 @@ const UserMenu = () => {
                 />
               </svg>
               My Orders
-            </Link>
+            </Link> */}
             
-            <Link 
+            {/* <Link 
               to="/wishlist" 
               className="user-menu-item"
               onClick={() => setIsOpen(false)}
@@ -152,9 +152,9 @@ const UserMenu = () => {
                 />
               </svg>
               Wishlist
-            </Link>
+            </Link> */}
             
-            <Link 
+            {/* <Link 
               to="/settings" 
               className="user-menu-item"
               onClick={() => setIsOpen(false)}
@@ -176,7 +176,7 @@ const UserMenu = () => {
                 />
               </svg>
               Settings
-            </Link>
+            </Link> */}
           </div>
           
           <div className="user-menu-divider"></div>
