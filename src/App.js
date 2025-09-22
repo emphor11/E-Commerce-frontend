@@ -15,6 +15,7 @@ import kids_banner from './components/assets/banner_kids.png';
 import ShopContextProvider from './context/ShopContext';
 import AuthProvider from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import ComingSoon from './pages/ComingSoon';
 
 function App() {
   return (
@@ -55,6 +56,11 @@ function App() {
                     </ProtectedRoute>
                   } 
                 />
+                {/* 👇 Add Coming Soon Page */}
+                <Route path="/coming-soon" element={<ComingSoon />} />
+
+                {/* 👇 Catch-all route for dead links */}
+                <Route path="*" element={<ComingSoon />} />
               </Routes>
             </main>
             <Footer />

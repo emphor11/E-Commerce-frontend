@@ -17,10 +17,10 @@ const Hero = () => {
           <p>Collections</p>
           <p>for everyone</p>
         </div>
-        <div className="hero-latest-butt">
-          <h1>Latest Collection</h1>
-          <img src={arr_bt} alt="" />
-        </div>
+        {/* <div className="hero-latest-butt"> */}
+          {/* <h1>Latest Collection</h1> */}
+          {/* <img src={arr_bt} alt="" /> */}
+        {/* </div> */}
       </div>
       <div className="hero-right">
         <img src={her_img} alt="" />
